@@ -1,0 +1,106 @@
+body {
+   
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+}
+
+body {
+
+    background-image: url('https://images.pexels.com/photos/1118873/pexels-photo-1118873.jpeg?cs=srgb&dl=clouds-dawn-dramatic-1118873.jpg&fm=jpg');
+
+    /* 2. Set the image to cover the entire viewport without repeating */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    /* Keeps the background static when scrolling */
+    background-position: center center;
+
+    min-height: 100vh;
+
+
+}
+
+.container {
+    padding: 20px;
+}
+
+.weather-card {
+    background-color: rgba(255, 255, 255, 0.95);
+    /* Slightly transparent white card */
+    border-radius: 15px;
+    padding: 15px;
+    /* Reduced padding for a smaller card */
+    transition: transform 0.3s ease-in-out;
+}
+
+.weather-card:hover {
+    /* transform: translateY(-5px); */
+    /* Simple hover effect */
+    transform:scale(1.1);
+    background-color: rgb(204, 248, 248);
+}
+
+/* Style for the current temperature to stand out, but slightly smaller */
+.temp-display .display-3 {
+    font-size: 3rem !important;
+}
+
+.temp-display .display-6 {
+    font-size: 1.5rem !important;
+}
+
+/* Style for the forecast cards to look neat */
+#forecast-container .card {
+    padding: 5px;
+    background-color: rgba(255, 255, 255, 0.85);
+    /* Slightly lighter/more transparent */
+    font-size: 0.85rem;
+}
+
+/* Adjust the search bar width on smaller screens */
+@media (max-width: 768px) {
+    .input-group.w-75 {
+        width: 100% !important;
+    }
+}
+/* Style for the City Input Box */
+#city-input {
+    background-color: transparent; 
+    color: #ffffff;         /* White text color for readability */
+    border: 2px solid #333333; /* Optional: adds a slight dark border */
+}
+
+/* Optional: To remove the blue/colored outline when the box is focused/clicked */
+#city-input:focus {
+    background-color: #000000;
+    color: #ffffff;
+    box-shadow: none; /* Removes default Bootstrap focus shadow */
+    border-color: #555555; /* Changes border color on focus */
+}
+/* Voice Search Button Styling */
+#voice-search-btn {
+    background-color: blue;
+    border-color: #444;
+    color: white;
+}
+
+/* Animation when the microphone is active/listening */
+.recording {
+    background-color: #ff4b2b !important;
+    animation: pulse 1.5s infinite;
+    color: white !important;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 75, 43, 0.7); }
+    70% { box-shadow: 0 0 0 10px rgba(255, 75, 43, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 75, 43, 0); }
+}
+h1{
+    background: linear-gradient(to right, #f32170, #ff6b08,rgb(91, 203, 226), #eedd44 );
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+}
